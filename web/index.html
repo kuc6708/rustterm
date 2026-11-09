@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>rustterm</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.css"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #111;
+      }
+      #term {
+        position: absolute;
+        inset: 0;
+        padding: 6px;
+        box-sizing: border-box;
+      }
+      #status {
+        position: absolute;
+        right: 10px;
+        bottom: 8px;
+        font: 12px monospace;
+        color: #666;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="term"></div>
+    <div id="status">connecting…</div>
+    <script src="https://cdn.jsdelivr.net/npm/xterm@5.3.0/lib/xterm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.8.0/lib/xterm-addon-fit.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
